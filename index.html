@@ -410,7 +410,7 @@
         <!-- Fetch README.md-->
         <script>
         function getReadme(){
-            fetch(`https://api.github.com/repos/opdev/opdev.github.io/contents/README.md`) // Fetch the file from GitHub's api
+            fetch(`https://api.github.com/repos/opdev/opdev.github.io/doc/README.md`) // Fetch the file from GitHub's api
                 .then(response => response.json())
                 .then(data => {
                     const content = atob(data.content); // Convert from base64 to readable text
