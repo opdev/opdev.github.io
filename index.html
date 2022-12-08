@@ -139,7 +139,7 @@
                                 <!-- Documentation-->
                                 <div>
                                     <h1>My README</h1>
-                                    <pre id="readme-text"></pre> <!-- "<pre>" preserves line breaks -->
+                                    <div id="readme-text" markdown="1"></div>
                                 </div>
                                 <!-- Post-->
                                 <article class="post">
@@ -412,10 +412,11 @@
         function getReadme(){
             //https://raw.githubusercontent.com/opdev/opdev.github.io/master/doc/README.md
             //https://api.github.com/repos/opdev/opdev.github.io/contents/doc/README.md
-            fetch(`https://raw.githubusercontent.com/opdev/opdev.github.io/master/doc/README.md`) // Fetch the file from GitHub's api
+            fetch(`https://api.github.com/repos/opdev/opdev.github.io/contents/doc/README.md`) // Fetch the file from GitHub's api
                 .then(response => response.json())
                 .then(data => {
-                    const content = document.getElementById("readme-text").textContent = content; // Apply content to the document
+                    const content = atob(data.content); // Convert from base64 to readable text
+                        document.getElementById("readme-text").textContent = content; // Apply content to the document
                     console.log(content); // Log the content to the console
                 })
                 .catch(error => console.log(error)); // Catch any errors
