@@ -140,6 +140,7 @@
                                 <div>
                                     <h1>My README</h1>
                                     <div id="readme-text" markdown="1"></div>
+                                    <span id="readme-text" style="display:block" class="note"></span>
                                 </div>
                                 <!-- Post-->
                                 <article class="post">
@@ -409,20 +410,20 @@
 
         <!-- Fetch README.md-->
         <script>
-        function getReadme(){
-            //https://raw.githubusercontent.com/opdev/opdev.github.io/master/doc/README.md
-            //https://api.github.com/repos/opdev/opdev.github.io/contents/doc/README.md
-            fetch(`https://api.github.com/repos/opdev/opdev.github.io/contents/doc/README.md`) // Fetch the file from GitHub's api
-                .then(response => response.json())
-                .then(data => {
-                    const content = atob(data.content); // Convert from base64 to readable text
-                        document.getElementById("readme-text").textContent = content; // Apply content to the document
-                    console.log(content); // Log the content to the console
-                })
-                .catch(error => console.log(error)); // Catch any errors
-        }
-        getReadme();
-    </script>
+            function getReadme(){
+                //https://raw.githubusercontent.com/opdev/opdev.github.io/master/doc/README.md
+                //https://api.github.com/repos/opdev/opdev.github.io/contents/doc/README.md
+                fetch(`https://api.github.com/repos/opdev/opdev.github.io/contents/doc/README.md`) // Fetch the file from GitHub's api
+                    .then(response => response.json())
+                    .then(data => {
+                        const content = atob(data.content); // Convert from base64 to readable text
+                            document.getElementById("readme-text").textContent = content; // Apply content to the document
+                        console.log(content); // Log the content to the console
+                    })
+                    .catch(error => console.log(error)); // Catch any errors
+            }
+            getReadme();
+        </script>
 
     </body>
 
