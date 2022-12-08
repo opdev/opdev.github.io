@@ -137,7 +137,10 @@
                             <div class="col-xl-8">
 
                                 <!-- Documentation-->
-                                https://raw.githubusercontent.com/opdev/opdev.github.io/main/doc/README.md
+                                <div>
+                                    <h1>My README</h1>
+                                    <pre id="readme-text"></pre> <!-- "<pre>" preserves line breaks -->
+                                </div>
                                 <!-- Post-->
                                 <article class="post">
 
@@ -403,6 +406,22 @@
         <script src="js/metisMenu.min.js"></script>
         <!--common script for all pages-->
         <script src="js/jquery.app.js"></script>
+
+        <!-- Fetch README.md-->
+        <script>
+        function getReadme(){
+            fetch(`https://api.github.com/repos/opdev/opdev.github.io/contents/README.md`) // Fetch the file from GitHub's api
+                .then(response => response.json())
+                .then(data => {
+                    const content = atob(data.content); // Convert from base64 to readable text
+                          document.getElementById("readme-text").textContent = content; // Apply content to the document
+                    console.log(content); // Log the content to the console
+                })
+                .catch(error => console.log(error)); // Catch any errors
+        }
+        getReadme();
+    </script>
+
     </body>
 
 </html>
