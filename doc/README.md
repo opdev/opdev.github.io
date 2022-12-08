@@ -2,4 +2,4 @@
 
 ### Operator
 
-* [Pod Security Standard](./docs/operator/podsecuritystandards)
+* [Pod Security Standard](./doc/operator/podsecuritystandards)
