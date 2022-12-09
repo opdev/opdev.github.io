@@ -1,5 +1,5 @@
-# Documentation from the OPERATOR ENABLEMENT team
+# List of compiled problems and solutions from working with our Partners, Operator Certification engineers, and everything else under the sink. 
 
-### Operator
+### Operators
 
 * [Pod Security Standard](./doc/operator/podsecuritystandards)
