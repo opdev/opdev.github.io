@@ -6,4 +6,4 @@
 
 ### Red Hat OpenShift Operator Certification
 
-* [Deploying onto Openshift](https://redhat-connect.gitbook.io/certified-operator-guide/)
+* [Deploying onto Openshift](https://redhat-connect.gitbook.io/certified-operator-guide/ocp-deployment/openshift-deployment){:target="_blank"}
