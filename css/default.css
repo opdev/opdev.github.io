@@ -26,3 +26,8 @@
 .btn-outline-custom:active,.show>.btn-outline-custom.dropdown-toggle,.btn-outline-custom{
     border-color: #0db3e3;
 }
+
+/*
+  - customized for this project
+*/
+iframe { background-color:white; }
