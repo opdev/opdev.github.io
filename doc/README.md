@@ -1,4 +1,4 @@
-### Kubernetes Operator Development
+### Operator Development
 
 ## Q/A
 
