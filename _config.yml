@@ -1,0 +1,23 @@
+collections:
+  articles:
+    output: true
+    permalink: /:collection/:name
+  pages:
+    output: true
+    permalink: /:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "standard-post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

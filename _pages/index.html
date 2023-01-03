@@ -1,0 +1,30 @@
+---
+title: Home
+---
+
+<h1>Latest Posts</h1>
+<br></br>
+
+{% assign articles = site.articles | reverse %}
+{% for article in articles %}
+    <article class="post">
+
+      <div class="post-header">
+          <h2 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+          <ul class="post-meta">
+              <li><i class="mdi mdi-calendar"></i>{{ article.date | date_to_string }}</li>
+          </ul>
+      </div>
+
+      <div class="post-preview">
+          <a href="#"><img src="../assets/images/blog/blog-1.jpg" alt="" class="img-fluid rounded"></a>
+      </div>
+
+      <div class="post-content">
+          <p>{{ article.excerpt }}</p>
+      </div>
+
+      <div><a href="{{ article.url }}" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
+
+    </article>
+{% endfor %}
