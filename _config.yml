@@ -23,6 +23,7 @@ defaults:
       layout: "default"
 
 host: opdev.github.io
+website: https://opdev.github.io
 baseurl: ""
 url: /
 
