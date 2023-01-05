@@ -5,9 +5,6 @@ collections:
   pages:
     output: true
     permalink: /:name
-  posts:
-    output: true
-    permlink: /:collection/:name
 
 defaults:
   - scope:
@@ -25,8 +22,8 @@ defaults:
     values:
       layout: "default"
 
-port: 4000
-host: 127.0.0.1
+host: opdev.github.io
+website: https://opdev.github.io
 baseurl: ""
 url: /
 
