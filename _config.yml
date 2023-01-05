@@ -5,6 +5,9 @@ collections:
   pages:
     output: true
     permalink: /:name
+  posts:
+    output: true
+    permlink: /:collection/:name
 
 defaults:
   - scope:
@@ -21,3 +24,9 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+port: 4000
+host: 127.0.0.1
+baseurl: ""
+url: /
+

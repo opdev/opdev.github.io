@@ -1,6 +1,8 @@
 ---
+title:  "This is an article about apples"
 author: jill
 ---
+
 An apple is a sweet, edible fruit produced by an apple tree.
 
 Apple trees are cultivated worldwide, and are the most widely grown species in
