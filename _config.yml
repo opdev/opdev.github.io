@@ -24,7 +24,5 @@ defaults:
 
 port: 4000
 host: 127.0.0.1
-website: https://opdev.github.io
-baseurl: ""
 url: opdev.github.io
 
