@@ -22,8 +22,9 @@ defaults:
     values:
       layout: "default"
 
+port: 4000
 host: opdev.github.io
 website: https://opdev.github.io
 baseurl: ""
-url: /
+url: opdev.github.io
 

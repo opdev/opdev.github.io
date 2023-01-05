@@ -6,7 +6,7 @@ layout: none
     {
       "title"    : "{{ article.title | escape }}",
       "author"   : "{{ article.author }}",
-      "url"      : "{{ site.url }}{{ article.url }}"
+      "url"      : "{{ site.baseurl }}{{ article.url }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
