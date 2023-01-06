@@ -110,12 +110,19 @@
 
                                     <!-- Categories widget-->
                                     <aside class="widget widget_categories">
-                                        <div class="widget-title">Categories</div>
+                                        <div class="widget-title all-tags">Categories</div>
                                         <ul>
-                                            <li><a href="#">Journey</a> (40)</li>
-                                            <li><a href="#">Photography</a> (08)</li>
-                                            <li><a href="#">Lifestyle</a> (11)</li>
-                                            <li><a href="#">Food & Drinks</a> (21)</li>
+                                            {% assign tags = site.articles | all_tags %}
+                                            {% for tag in tags %}
+                                            {% assign tag_slug = tag['name'] | slugify: "raw" %}
+                                            <li class="tagcloud">
+                                                <a class="tag-link"
+                                                href={{ site.baseurl | append: "/" | append: tag_slug | append: "/" }}
+                                                rel="category tag">
+                                                #{{ tag['name'] }} ({{ tag['count'] }})
+                                                </a>
+                                            </li>
+                                            {% endfor %}
                                         </ul>
                                     </aside>
 

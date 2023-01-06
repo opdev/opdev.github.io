@@ -5,6 +5,9 @@ collections:
   pages:
     output: true
     permalink: /:name
+  tags:
+    output: true
+    permalink: /:name
 
 defaults:
   - scope:
@@ -14,9 +17,9 @@ defaults:
       layout: "standard-post"
   - scope:
       path: ""
-      type: "pages"
+      type: "tags"
     values:
-      layout: "default"
+      layout: "tagpage"
   - scope:
       path: ""
     values:
@@ -24,4 +27,3 @@ defaults:
 
 port: 4000
 host: 127.0.0.1
-

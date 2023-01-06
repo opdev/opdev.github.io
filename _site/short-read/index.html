@@ -6,7 +6,7 @@
     <meta name="description" content="Jekyll Experiment Site">
     <meta name="author" content="OpDev">
 
-    <title>This is an article about banana</title>
+    <title>Short Read</title>
 
     <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
@@ -117,7 +117,7 @@
                                 <div class="page-title">
                                     <div class="row">
                                         <div class="col-md-9 col-xs-12">
-                                            <h2><span>This is an article about banana</span></h2>
+                                            <h2><span>Short Read</span></h2>
 
                                             <p class="subtitle text-muted">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor Aenean sollicitudin, adipisicing elit sed lorem quis bibendum auctor.</p>
                                         </div>
@@ -135,106 +135,56 @@
                             <!-- Content-->
                             <div class="col-xl-8">
 
-                            <!-- Post-->
-<article class="post">
-    <div class="post-header">
-        <h2 class="post-title"><a href="#">This is an article about banana</a></h2>
-        <ul class="post-meta">
-            <li><i class="mdi mdi-calendar"></i> 09 Jan 2023</li>
-        </ul>
-    </div>
+                            <!-- requires slugify to convert to string saved in a variable so it can be used in conditional -->
+<!-- filters through articles to only gather ones with the correct tag -->
+<!-- loops over articles to display on the page -->
 
-    <div class="post-preview">
-        <a href="#"><img src="../assets/images/blog/blog-1.jpg" alt="" class="img-fluid rounded"></a>
-    </div>
 
-    <div class="blog-detail-description">
-        <p><p>A banana is an edible fruit – botanically a berry – produced by several kinds
-of large herbaceous flowering plants in the genus Musa.</p>
 
-<p>In some countries, bananas used for cooking may be called “plantains”,
-distinguishing them from dessert bananas. The fruit is variable in size, color,
-and firmness, but is usually elongated and curved, with soft flesh rich in
-starch covered with a rind, which may be green, yellow, red, purple, or brown
-when ripe.</p>
+    <article class="post">
+
+        <div class="post-header">
+            <h2 class="post-title"><a href="/articles/apples">This is an article about apples</a></h2>
+            <ul class="post-meta">
+                <li><i class="mdi mdi-calendar"></i>09 Jan 2023</li>
+            </ul>
+        </div>
+
+        <div class="post-preview">
+            <a href="#"><img src="../assets/images/blog/blog-1.jpg" alt="" class="img-fluid rounded"></a>
+        </div>
+
+        <div class="post-content">
+            <p><p>An apple is a sweet, edible fruit produced by an apple tree.</p>
 </p>
-
-        <div class="mt-5">
-            <h6>Tags:</h6>
-                
-                
-                <div class="tagcloud">
-                    <a class="tag-link"
-                    href=/fruits/
-                    rel="category tag">
-                    #fruits
-                    </a>
-                </div>
-                
         </div>
 
-        <div class="media post-author-box">
-            <img class="d-flex mr-3 rounded-circle" src="../assets/images/user/user-5.png" alt="Generic placeholder image">
-            <div class="media-body">
-                <h4 class="media-heading"><a href="">Michelle Durant</a></h4>
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+        <div><a href="/articles/apples" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
 
-                <ul class="socials list-unstyled mb-0 mt-3">
-                    <li><a href="http://facebook.com"><i class="mdi mdi-facebook"></i></a></li>
-                    <li><a href="http://twitter.com"><i class="mdi mdi-twitter"></i></a></li>
-                    <li><a href="http://instagram.com"><i class="mdi mdi-instagram"></i></a></li>
-                    <li><a href="http://pinterest.com"><i class="mdi mdi-pinterest"></i></a></li>
-                </ul>
-            </div>
+    </article>
+
+    <article class="post">
+
+        <div class="post-header">
+            <h2 class="post-title"><a href="/articles/podsecurity">Pod Security</a></h2>
+            <ul class="post-meta">
+                <li><i class="mdi mdi-calendar"></i>09 Jan 2023</li>
+            </ul>
         </div>
 
-        <div class="mt-5 text-center">
-            <h5 class="page-title-alt"><span>You Might Also Like</span></h5>
+        <div class="post-preview">
+            <a href="#"><img src="../assets/images/blog/blog-1.jpg" alt="" class="img-fluid rounded"></a>
         </div>
 
-        <div class="row">
-            <div class="col-sm-4">
-                <article class="related-post">
-                    <div class="post-preview">
-                        <a href="#"><img src="../assets/images/blog/blog-2.jpg" alt="" class="img-fluid rounded"></a>
-                    </div>
-
-                    <div class="post-header">
-                        <h6><a href="single-post2.html" title="">15 Best Healthy and Easy Salad Recipes</a></h6>
-                        <p class="post-date">August 12, 2017</p>
-                    </div>
-                </article>
-            </div>
-            <div class="col-sm-4">
-                <article class="related-post">
-                    <div class="post-preview">
-                        <a href="#"><img src="../assets/images/blog/blog-3.jpg" alt="" class="img-fluid rounded"></a>
-                    </div>
-
-                    <div class="post-header">
-                        <h6><a href="single-post2.html" title="">The planet doesn’t need saving. We do.</a></h6>
-                        <p class="post-date">August 17, 2017</p>
-                    </div>
-                </article>
-            </div>
-            <div class="col-sm-4">
-                <article class="related-post">
-                    <div class="post-preview">
-                        <a href="#"><img src="../assets/images/blog/blog-4.jpg" alt="" class="img-fluid rounded"></a>
-                    </div>
-
-                    <div class="post-header">
-                        <h6><a href="single-post2.html" title="">Modern City With Amazing Dark Blue Sea</a></h6>
-                        <p class="post-date">August 20, 2017</p>
-                    </div>
-                </article>
-            </div>
+        <div class="post-content">
+            <p><p>The PodSecurityPolicy API is deprecated and will be removed from Kubernetes in version 1.25. This API is replaced by a new built-in admission controller (KEP-2579: Pod Security Admission Control) which allows cluster admins to enforce Pod Security Standards Labels.</p>
+</p>
         </div>
 
-    </div>
+        <div><a href="/articles/podsecurity" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
 
-</article>
-<!-- Post end-->
+    </article>
+
 
 
                             </div>
