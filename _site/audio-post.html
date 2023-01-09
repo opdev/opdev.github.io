@@ -347,10 +347,28 @@
 
                                     <!-- Search widget-->
                                     <aside class="widget widget_search">
-                                        <form>
-                                            <input class="form-control pr-5" type="search" placeholder="Search...">
-                                            <button class="search-button" type="submit"><span class="mdi mdi-magnify"></span></button>
-                                        </form>
+                                        <!-- Html Elements for Search -->
+                                       <!-- Html Elements for Search -->
+
+<div id="search-container"></div>
+   <form>
+      <input class="form-control pr-5" id="search-input" type="search" placeholder="Search...">
+      <ul id="results-container"></ul>
+   </form>
+</div>
+<script src="../assets/js/search-script.js"></script>
+<script>
+     window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<li><a href="http://localhost:4000{url}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+</script>
                                     </aside>
 
                                     <aside class="widget about-widget">
@@ -378,12 +396,37 @@
 
                                     <!-- Categories widget-->
                                     <aside class="widget widget_categories">
-                                        <div class="widget-title">Categories</div>
+                                        <div class="widget-title all-tags">Categories</div>
                                         <ul>
-                                            <li><a href="#">Journey</a> (40)</li>
-                                            <li><a href="#">Photography</a> (08)</li>
-                                            <li><a href="#">Lifestyle</a> (11)</li>
-                                            <li><a href="#">Food & Drinks</a> (21)</li>
+                                            
+                                            
+                                            
+                                            <li class="tagcloud">
+                                                <a class="tag-link"
+                                                href=/fruits/
+                                                rel="category tag">
+                                                #fruits (3)
+                                                </a>
+                                            </li>
+                                            
+                                            
+                                            <li class="tagcloud">
+                                                <a class="tag-link"
+                                                href=/short-read/
+                                                rel="category tag">
+                                                #short-read (2)
+                                                </a>
+                                            </li>
+                                            
+                                            
+                                            <li class="tagcloud">
+                                                <a class="tag-link"
+                                                href=/operators/
+                                                rel="category tag">
+                                                #operators (2)
+                                                </a>
+                                            </li>
+                                            
                                         </ul>
                                     </aside>
 

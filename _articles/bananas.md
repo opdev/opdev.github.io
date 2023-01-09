@@ -1,6 +1,7 @@
 ---
 title:  "This is an article about banana"
 author: jill
+tags: fruits
 ---
 
 A banana is an edible fruit – botanically a berry – produced by several kinds

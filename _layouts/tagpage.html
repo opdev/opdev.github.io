@@ -1,0 +1,32 @@
+---
+layout: default
+title: page.tag
+---
+
+<!-- requires slugify to convert to string saved in a variable so it can be used in conditional -->
+<!-- filters through articles to only gather ones with the correct tag -->
+<!-- loops over articles to display on the page -->
+{% assign tag_slug = page.title | slugify: "raw" %}
+{% assign tag_articles = site.articles | where_exp: "article", "article.tags contains tag_slug" %}
+{% for article in tag_articles %}
+    <article class="post">
+
+        <div class="post-header">
+            <h2 class="post-title"><a href="{{ article.url }}">{{ article.title }}</a></h2>
+            <ul class="post-meta">
+                <li><i class="mdi mdi-calendar"></i>{{ article.date | date_to_string }}</li>
+            </ul>
+        </div>
+
+        <div class="post-preview">
+            <a href="#"><img src="../assets/images/blog/blog-1.jpg" alt="" class="img-fluid rounded"></a>
+        </div>
+
+        <div class="post-content">
+            <p>{{ article.excerpt }}</p>
+        </div>
+
+        <div><a href="{{ article.url }}" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
+
+    </article>
+{% endfor %}
