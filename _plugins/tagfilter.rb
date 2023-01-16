@@ -1,11 +1,11 @@
 module AllTagsFilter
     include Liquid::StandardFilters
 
-    def all_tags(articles)
+    def all_tags(posts)
       counts = {}
 
-      articles.each do |article|
-        article['tags'].each do |tag|
+      posts.each do |post|
+        post['tags'].each do |tag|
           if counts[tag]
             counts[tag] += 1
           else

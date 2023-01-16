@@ -4,11 +4,11 @@ title: page.tag
 ---
 
 <!-- requires slugify to convert to string saved in a variable so it can be used in conditional -->
-<!-- filters through posts to only gather ones with the correct tag -->
+<!-- filters through posts to only gather ones with the correct category -->
 <!-- loops over posts to display on the page -->
-{% assign tag_slug = page.title | slugify: "raw" %}
-{% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag_slug" %}
-{% for post in tag_posts %}
+{% assign category_slug = page.title | slugify: "raw" %}
+{% assign category_posts = site.posts | where_exp: "post", "post.categories contains category_slug" %}
+{% for post in category_posts %}
     <article class="post">
 
         <div class="post-header">

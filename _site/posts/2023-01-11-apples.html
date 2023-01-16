@@ -6,7 +6,7 @@
     <meta name="description" content="Jekyll Experiment Site">
     <meta name="author" content="OpDev">
 
-    <title>L5 Operator</title>
+    <title>This is an article about apples</title>
 
     <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
@@ -35,7 +35,7 @@
             <!-- Top Bar Start -->
             <div class="topbar-mobile">
                 <div class="logo">
-                    <a href="index.html"><img src="../assets/images/red-logo.jpg" alt="" class="" style="height: 66px;"></a>
+                    <a href="../"><img src="../assets/images/red-logo.jpg" alt="" class="" style="height: 66px;"></a>
                     <button class="button-menu-mobile">
                         <i class="mdi mdi-menu"></i>
                     </button>
@@ -48,7 +48,7 @@
                 <div class="slimscroll-menu" id="remove-scroll">
 
                     <div class="logo">
-                        <a href="index.html"><img src="../assets/images/red-logo.jpg" alt="" class="" style="height: 66px;"></a>
+                        <a href="../"><img src="../assets/images/red-logo.jpg" alt="" class="" style="height: 66px;"></a>
                         <p class="text-muted">The Central location for everything operators. Resources and content curated by Red Hat's Operator Enablement and Tooling Team.</p>
                     </div>
 
@@ -117,7 +117,7 @@
                                 <div class="page-title">
                                     <div class="row">
                                         <div class="col-md-9 col-xs-12">
-                                            <h2><span>L5 Operator</span></h2>
+                                            <h2><span>This is an article about apples</span></h2>
 
                                             <p class="subtitle text-muted">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor Aenean sollicitudin, adipisicing elit sed lorem quis bibendum auctor.</p>
                                         </div>
@@ -138,9 +138,9 @@
                             <!-- Post-->
 <article class="post">
     <div class="post-header">
-        <h2 class="post-title"><a href="#">L5 Operator</a></h2>
+        <h2 class="post-title"><a href="#">This is an article about apples</a></h2>
         <ul class="post-meta">
-            <li><i class="mdi mdi-calendar"></i> 09 Jan 2023</li>
+            <li><i class="mdi mdi-calendar"></i> 11 Jan 2023</li>
         </ul>
     </div>
 
@@ -149,90 +149,13 @@
     </div>
 
     <div class="blog-detail-description">
-        <p><p>The L5 Operator’s README file as an example.</p>
+        <p><p>An apple is a sweet, edible fruit produced by an apple tree.</p>
 
-<h1 id="l5-demo-operator-️">L5 Demo Operator 🏗️</h1>
-
-<p>The projects goal is to develop a demo operator with level 5 capabilities to serve as an example to enhance workshop <a href="https://drive.google.com/drive/u/0/folders/1l6FY1QdBq1IsmwM6Ib44A8h12OSKGJbe">(internal)</a> as well as to present at kubecon or a similar conference for which a <a href="https://drive.google.com/file/d/1GjJgBcJmywP3L64m1h4vZ68UIu-XJxMZ/view?usp=sharing">proposal</a> was submitted. One version of the <a href="https://opdev.github.io/l5-operator-demo/">(presentation)</a> was accepted to <a href="https://cfp.cloud-native.rejekts.io/cloud-native-rejekts-eu-valencia-2022/talk/review/LESBCQ3MJQFEE3JWMRCJKKL9XT7YMDHP">(cloud native rejects)</a>. The capabilities are being developed according to our interpretation of the requirements described by the operator capability descriptions given in the operator sdk which are currently being evolved <a href="https://docs.google.com/document/d/1gNa2NQzlsHDdNHBYPczCytkuokEzBCFKjlxM12X5cdk/edit?usp=sharing">working in progress</a></p>
-
-<h2 id="current-capability-descriptions">Current Capability descriptions</h2>
-<p>The l5 operator is an example of a minimal implementation of the 5 capability levels described by the operator framework</p>
-
-<h3 id="level-1-basic-install">Level 1: Basic Install</h3>
-<p>The L5 operator is able to take advantage of the Operator Lifecycle Manager and is able to deployed with one click. Once deployed it is able to set up its operator upon creation of a custom resource. User can install the operand by creating and configuring the CR. When configuration changes are applied, the app version is reported in the status and the operand updates in a non-distruptive fashion when the configuration of the CR is changed.</p>
-
-<h3 id="level-2-seamless-upgrades">Level 2: Seamless Upgrades</h3>
-<p>It’s possible to rollout both operator and operand updates seamlessly with some caveats. Liveness and readiness probes come free. The operator is able to update the operand via the CR field. By doing so, we are able to control the app version and report the status.</p>
-
-<h3 id="level-3-full-lifecycle">Level 3: Full Lifecycle</h3>
-<p>Backup and restore functionality is provided via the crunchy postgres operator which we consume in order to get a database-as-a-service right within our cluster. The L5 operator contains a liveness and readiness probe, so if the connection to the database fails, it will wait for reconfiguration work to be finished. The L5 operator utilizes the rolling deployment strategy.</p>
-
-<h3 id="level-4-deep-insights">Level 4: Deep Insights</h3>
-<p>The operator as well as operand expose metrics. These are aggregated using Prometheus and visualized using Grafana. The operator exposes health metrics endpoints such as app latency, request per second, and http codes. Currently we are working on implementing the RED method which defines three key metrics for any service: <em>*rate*</em> - the number of requests per second, <em>*errors*</em> - the number of those requests that are failing, and <em>*duration*</em> - the amount of time those requests take.</p>
-
-<h3 id="level-5-autopilot">Level 5: Autopilot</h3>
-<p>The operator is able to autoscale by automatically provisioning a horizontal pod autoscaler that automatically changes the size of the deployment based on application load. The operator is able to scale the pods accordingly within the range of the size and maxReplicas we declare.</p>
-
-<h1 id="operator-installation">Operator Installation</h1>
-<p>The operator is published as a community operator on the openshift operator hub.</p>
-
-<h2 id="different-ways-to-run-the-operator-using-the-operator-sdk">Different ways to run the Operator using the Operator SDK</h2>
-
-<h3 id="prerequisites">Prerequisites</h3>
-<ul>
-  <li>When not using OLM to install the L5 Operator, the Crunchy Data Postgres Operator needs to be installed either from Operator Hub when using Openshift or <a href="https://access.crunchydata.com/documentation/postgres-operator/v5/quickstart/">manually</a></li>
-  <li>The L5 Operator requires an ingress controller to be installed if running on vanilla kubernetes if not already present. Steps for installing ingress controller for different clusters can be followed from <a href="https://kubernetes.github.io/ingress-nginx/deploy/">here</a></li>
-</ul>
-
-<h3 id="1-run-locally-outside-the-cluster">1. Run locally outside the cluster</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/opdev/l5-operator-demo
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;project&gt;
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make generate
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make manifests
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make install
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make run
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>oc apply -f config/samples/pets_v1_bestie.yaml
-</code></pre></div></div>
-
-<h3 id="2-run-as-a-deployment-inside-the-cluster">2. Run as a Deployment inside the cluster</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/opdev/l5-operator-demo
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;project&gt;
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make generate
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make manifests
-</code></pre></div></div>
-
-<ul>
-  <li>Build and push your image to the location specified by IMG:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make docker-build docker-push IMG=&lt;some-registry&gt;/&lt;project-name&gt;:tag
-</code></pre></div>    </div>
-  </li>
-  <li>Deploy the controller to the cluster with image specified by IMG:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make deploy IMG=&lt;some-registry&gt;/&lt;project-name&gt;:tag
-</code></pre></div>    </div>
-  </li>
-</ul>
-
-<h3 id="3-deploy-the-operator-with-olm">3. Deploy the Operator with OLM</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>operator-sdk run bundle &lt;operator-bundle-image&gt;
-</code></pre></div></div>
+<p>Apple trees are cultivated worldwide, and are the most widely grown species in
+the genus Malus. The tree originated in Central Asia, where its wild ancestor,
+Malus sieversii, is still found today. Apples have been grown for thousands of
+years in Asia and Europe, and were brought to North America by European
+colonists.</p>
 </p>
 
         <div class="mt-5">
@@ -241,9 +164,18 @@
                 
                 <div class="tagcloud">
                     <a class="tag-link"
-                    href=/operators/
+                    href=/fruits/
                     rel="category tag">
-                    #operators
+                    fruits
+                    </a>
+                </div>
+                
+                
+                <div class="tagcloud">
+                    <a class="tag-link"
+                    href=/short-read/
+                    rel="category tag">
+                    short-read
                     </a>
                 </div>
                 
@@ -378,27 +310,9 @@
                                             
                                             <li class="tagcloud">
                                                 <a class="tag-link"
-                                                href=/fruits/
-                                                rel="category tag">
-                                                #fruits (3)
-                                                </a>
-                                            </li>
-                                            
-                                            
-                                            <li class="tagcloud">
-                                                <a class="tag-link"
-                                                href=/short-read/
-                                                rel="category tag">
-                                                #short-read (2)
-                                                </a>
-                                            </li>
-                                            
-                                            
-                                            <li class="tagcloud">
-                                                <a class="tag-link"
                                                 href=/operators/
                                                 rel="category tag">
-                                                #operators (2)
+                                                operators (2)
                                                 </a>
                                             </li>
                                             
@@ -455,12 +369,22 @@
                                     <aside class="widget widget_tag_cloud">
                                         <div class="widget-title">Tags</div>
                                         <div class="tagcloud">
-                                            <a href="#">logo</a>
-                                            <a href="#">business</a>
-                                            <a href="#">corporate</a>
-                                            <a href="#">e-commerce</a>
-                                            <a href="#">agency</a>
-                                            <a href="#">responsive</a>
+                                            
+                                            
+                                            
+                                                <a class="tag-link"
+                                                href=/fruits/
+                                                rel="category tag">
+                                                fruits (3)
+                                                </a>
+                                            
+                                            
+                                                <a class="tag-link"
+                                                href=/short-read/
+                                                rel="category tag">
+                                                short-read (2)
+                                                </a>
+                                            
                                         </div>
                                     </aside>
                                 </div>
