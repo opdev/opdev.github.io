@@ -145,7 +145,7 @@
       <div class="post-header">
           <h2 class="post-title"><a href="/articles/podsecurity">Pod Security</a></h2>
           <ul class="post-meta">
-              <li><i class="mdi mdi-calendar"></i>03 Jan 2023</li>
+              <li><i class="mdi mdi-calendar"></i>09 Jan 2023</li>
           </ul>
       </div>
 
@@ -167,7 +167,7 @@
       <div class="post-header">
           <h2 class="post-title"><a href="/articles/l5-op">L5 Operator</a></h2>
           <ul class="post-meta">
-              <li><i class="mdi mdi-calendar"></i>03 Jan 2023</li>
+              <li><i class="mdi mdi-calendar"></i>09 Jan 2023</li>
           </ul>
       </div>
 
@@ -189,7 +189,7 @@
       <div class="post-header">
           <h2 class="post-title"><a href="/articles/kiwifruit">Kiwifruit</a></h2>
           <ul class="post-meta">
-              <li><i class="mdi mdi-calendar"></i>03 Jan 2023</li>
+              <li><i class="mdi mdi-calendar"></i>09 Jan 2023</li>
           </ul>
       </div>
 
@@ -198,7 +198,7 @@
       </div>
 
       <div class="post-content">
-          <p><p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
+          <p><p>New Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
 berry of several species of woody vines in the genus Actinidia.</p>
 </p>
       </div>
@@ -210,9 +210,9 @@ berry of several species of woody vines in the genus Actinidia.</p>
     <article class="post">
 
       <div class="post-header">
-          <h2 class="post-title"><a href="/articles/bananas">Bananas</a></h2>
+          <h2 class="post-title"><a href="/articles/bananas">This is an article about banana</a></h2>
           <ul class="post-meta">
-              <li><i class="mdi mdi-calendar"></i>03 Jan 2023</li>
+              <li><i class="mdi mdi-calendar"></i>09 Jan 2023</li>
           </ul>
       </div>
 
@@ -233,9 +233,9 @@ of large herbaceous flowering plants in the genus Musa.</p>
     <article class="post">
 
       <div class="post-header">
-          <h2 class="post-title"><a href="/articles/apples">Apples</a></h2>
+          <h2 class="post-title"><a href="/articles/apples">This is an article about apples</a></h2>
           <ul class="post-meta">
-              <li><i class="mdi mdi-calendar"></i>03 Jan 2023</li>
+              <li><i class="mdi mdi-calendar"></i>09 Jan 2023</li>
           </ul>
       </div>
 
@@ -263,10 +263,28 @@ of large herbaceous flowering plants in the genus Musa.</p>
 
                                     <!-- Search widget-->
                                     <aside class="widget widget_search">
-                                        <form>
-                                            <input class="form-control pr-5" type="search" placeholder="Search...">
-                                            <button class="search-button" type="submit"><span class="mdi mdi-magnify"></span></button>
-                                        </form>
+                                        <!-- Html Elements for Search -->
+                                       <!-- Html Elements for Search -->
+
+<div id="search-container"></div>
+   <form>
+      <input class="form-control pr-5" id="search-input" type="search" placeholder="Search...">
+      <ul id="results-container"></ul>
+   </form>
+</div>
+<script src="../assets/js/search-script.js"></script>
+<script>
+     window.simpleJekyllSearch = new SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<li><a href="http://localhost:4000{url}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+</script>
                                     </aside>
 
                                     <aside class="widget about-widget">
@@ -294,12 +312,37 @@ of large herbaceous flowering plants in the genus Musa.</p>
 
                                     <!-- Categories widget-->
                                     <aside class="widget widget_categories">
-                                        <div class="widget-title">Categories</div>
+                                        <div class="widget-title all-tags">Categories</div>
                                         <ul>
-                                            <li><a href="#">Journey</a> (40)</li>
-                                            <li><a href="#">Photography</a> (08)</li>
-                                            <li><a href="#">Lifestyle</a> (11)</li>
-                                            <li><a href="#">Food & Drinks</a> (21)</li>
+                                            
+                                            
+                                            
+                                            <li class="tagcloud">
+                                                <a class="tag-link"
+                                                href=/fruits/
+                                                rel="category tag">
+                                                #fruits (3)
+                                                </a>
+                                            </li>
+                                            
+                                            
+                                            <li class="tagcloud">
+                                                <a class="tag-link"
+                                                href=/short-read/
+                                                rel="category tag">
+                                                #short-read (2)
+                                                </a>
+                                            </li>
+                                            
+                                            
+                                            <li class="tagcloud">
+                                                <a class="tag-link"
+                                                href=/operators/
+                                                rel="category tag">
+                                                #operators (2)
+                                                </a>
+                                            </li>
+                                            
                                         </ul>
                                     </aside>
 

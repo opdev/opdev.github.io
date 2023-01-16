@@ -1,5 +1,6 @@
 ---
 title: L5 Operator
+tags: operators
 ---
 
 The L5 Operator's README file as an example.

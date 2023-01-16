@@ -1,6 +1,7 @@
 ---
 title:  "This is an article about apples"
 author: jill
+tags: fruits short-read
 ---
 
 An apple is a sweet, edible fruit produced by an apple tree.
