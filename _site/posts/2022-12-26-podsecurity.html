@@ -6,7 +6,7 @@
     <meta name="description" content="Jekyll Experiment Site">
     <meta name="author" content="OpDev">
 
-    <title>This is an article about apples</title>
+    <title>Pod Security</title>
 
     <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
@@ -35,7 +35,7 @@
             <!-- Top Bar Start -->
             <div class="topbar-mobile">
                 <div class="logo">
-                    <a href="index.html"><img src="../assets/images/red-logo.jpg" alt="" class="" style="height: 66px;"></a>
+                    <a href="../"><img src="../assets/images/red-logo.jpg" alt="" class="" style="height: 66px;"></a>
                     <button class="button-menu-mobile">
                         <i class="mdi mdi-menu"></i>
                     </button>
@@ -48,7 +48,7 @@
                 <div class="slimscroll-menu" id="remove-scroll">
 
                     <div class="logo">
-                        <a href="index.html"><img src="../assets/images/red-logo.jpg" alt="" class="" style="height: 66px;"></a>
+                        <a href="../"><img src="../assets/images/red-logo.jpg" alt="" class="" style="height: 66px;"></a>
                         <p class="text-muted">The Central location for everything operators. Resources and content curated by Red Hat's Operator Enablement and Tooling Team.</p>
                     </div>
 
@@ -117,7 +117,7 @@
                                 <div class="page-title">
                                     <div class="row">
                                         <div class="col-md-9 col-xs-12">
-                                            <h2><span>This is an article about apples</span></h2>
+                                            <h2><span>Pod Security</span></h2>
 
                                             <p class="subtitle text-muted">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor Aenean sollicitudin, adipisicing elit sed lorem quis bibendum auctor.</p>
                                         </div>
@@ -138,9 +138,9 @@
                             <!-- Post-->
 <article class="post">
     <div class="post-header">
-        <h2 class="post-title"><a href="#">This is an article about apples</a></h2>
+        <h2 class="post-title"><a href="#">Pod Security</a></h2>
         <ul class="post-meta">
-            <li><i class="mdi mdi-calendar"></i> 09 Jan 2023</li>
+            <li><i class="mdi mdi-calendar"></i> 26 Dec 2022</li>
         </ul>
     </div>
 
@@ -149,13 +149,28 @@
     </div>
 
     <div class="blog-detail-description">
-        <p><p>An apple is a sweet, edible fruit produced by an apple tree.</p>
+        <p><p>The PodSecurityPolicy API is deprecated and will be removed from Kubernetes in version 1.25. This API is replaced by a new built-in admission controller (KEP-2579: Pod Security Admission Control) which allows cluster admins to enforce Pod Security Standards Labels.</p>
 
-<p>Apple trees are cultivated worldwide, and are the most widely grown species in
-the genus Malus. The tree originated in Central Asia, where its wild ancestor,
-Malus sieversii, is still found today. Apples have been grown for thousands of
-years in Asia and Europe, and were brought to North America by European
-colonists.</p>
+<ul>
+  <li>Operator SDK provides documentation to get around this issue for Golang, Ansible, and Helm based Operators.</li>
+  <li><a href="https://sdk.operatorframework.io/docs/best-practices/pod-security-standards/" target="_blank">Pod Security Standards</a></li>
+</ul>
+
+<h3 id="operator-development">Operator Development</h3>
+
+<h2 id="qa">Q/A</h2>
+
+<h2 id="general">General</h2>
+<ul>
+  <li><a href="./doc/operator/podsecuritystandards">Pod Security Standard</a></li>
+  <li><a href="https://github.com/sradco/operator-sdk/blob/af8e6383b2d50d4cc2c2c98a1b067c16f85a1c83/website/content/en/docs/best-practices/observability-best-practices.md">Operator Observability Best Practices</a></li>
+</ul>
+
+<h3 id="red-hat-openshift-operator-certification">Red Hat OpenShift Operator Certification</h3>
+
+<ul>
+  <li><a href="https://redhat-connect.gitbook.io/certified-operator-guide/ocp-deployment/openshift-deployment">Deploying onto Openshift</a></li>
+</ul>
 </p>
 
         <div class="mt-5">
@@ -164,18 +179,9 @@ colonists.</p>
                 
                 <div class="tagcloud">
                     <a class="tag-link"
-                    href=/fruits/
-                    rel="category tag">
-                    #fruits
-                    </a>
-                </div>
-                
-                
-                <div class="tagcloud">
-                    <a class="tag-link"
                     href=/short-read/
                     rel="category tag">
-                    #short-read
+                    short-read
                     </a>
                 </div>
                 
@@ -310,27 +316,9 @@ colonists.</p>
                                             
                                             <li class="tagcloud">
                                                 <a class="tag-link"
-                                                href=/fruits/
-                                                rel="category tag">
-                                                #fruits (3)
-                                                </a>
-                                            </li>
-                                            
-                                            
-                                            <li class="tagcloud">
-                                                <a class="tag-link"
-                                                href=/short-read/
-                                                rel="category tag">
-                                                #short-read (2)
-                                                </a>
-                                            </li>
-                                            
-                                            
-                                            <li class="tagcloud">
-                                                <a class="tag-link"
                                                 href=/operators/
                                                 rel="category tag">
-                                                #operators (2)
+                                                operators (2)
                                                 </a>
                                             </li>
                                             
@@ -387,12 +375,22 @@ colonists.</p>
                                     <aside class="widget widget_tag_cloud">
                                         <div class="widget-title">Tags</div>
                                         <div class="tagcloud">
-                                            <a href="#">logo</a>
-                                            <a href="#">business</a>
-                                            <a href="#">corporate</a>
-                                            <a href="#">e-commerce</a>
-                                            <a href="#">agency</a>
-                                            <a href="#">responsive</a>
+                                            
+                                            
+                                            
+                                                <a class="tag-link"
+                                                href=/fruits/
+                                                rel="category tag">
+                                                fruits (3)
+                                                </a>
+                                            
+                                            
+                                                <a class="tag-link"
+                                                href=/short-read/
+                                                rel="category tag">
+                                                short-read (2)
+                                                </a>
+                                            
                                         </div>
                                     </aside>
                                 </div>

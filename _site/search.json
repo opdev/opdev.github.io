@@ -3,31 +3,31 @@
     {
       "title"    : "This is an article about apples",
       "author"   : "jill",
-      "url"      : "/articles/apples"
+      "url"      : "/posts/2023-01-11-apples"
     } ,
   
     {
       "title"    : "This is an article about banana",
       "author"   : "jill",
-      "url"      : "/articles/bananas"
-    } ,
-  
-    {
-      "title"    : "Kiwifruit",
-      "author"   : "ted",
-      "url"      : "/articles/kiwifruit"
+      "url"      : "/posts/2023-01-10-bananas"
     } ,
   
     {
       "title"    : "L5 Operator",
       "author"   : "",
-      "url"      : "/articles/l5-op"
+      "url"      : "/posts/2023-01-01-l5-op"
+    } ,
+  
+    {
+      "title"    : "Kiwifruit",
+      "author"   : "ted",
+      "url"      : "/posts/2022-12-31-kiwifruit"
     } ,
   
     {
       "title"    : "Pod Security",
       "author"   : "Rose",
-      "url"      : "/articles/podsecurity"
+      "url"      : "/posts/2022-12-26-podsecurity"
     } 
   
 ]

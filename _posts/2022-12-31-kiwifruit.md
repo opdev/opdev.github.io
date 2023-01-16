@@ -1,4 +1,5 @@
 ---
+title: Kiwifruit
 author: ted
 tags: fruits
 ---

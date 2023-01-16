@@ -1,20 +1,28 @@
 collections:
-  articles:
-    output: true
-    permalink: /:collection/:name
   pages:
     output: true
     permalink: /:name
   tags:
     output: true
     permalink: /:name
+  categories:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:collection/:name
 
 defaults:
   - scope:
       path: ""
-      type: "articles"
+      type: "posts"
     values:
       layout: "standard-post"
+  - scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: "categorypage"
   - scope:
       path: ""
       type: "tags"

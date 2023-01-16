@@ -2,11 +2,11 @@
 layout: none
 ---
 [
-  {% for article in site.articles %}
+  {% for post in site.posts %}
     {
-      "title"    : "{{ article.title | escape }}",
-      "author"   : "{{ article.author }}",
-      "url"      : "{{ article.url }}"
+      "title"    : "{{ post.title | escape }}",
+      "author"   : "{{ post.author }}",
+      "url"      : "{{ post.url }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
