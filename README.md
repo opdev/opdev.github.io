@@ -1,39 +1,54 @@
 # Running opdev.github.io
 
-#### Fork and clone the repo:
-1. fork opdev github pages [repo](https://github.com/opdev/opdev.github.io)
-
-2. `git clone` from your forked repo
-
 #### If you do not have ruby installed, follow these steps:
-3. `brew install chruby ruby-install`
+
+##### MacOS
+1. `brew install chruby ruby-install`
     - for Macs, followed these instructions [install chruby & ruby](https://stackoverflow.com/questions/51126403/you-dont-have-write-permissions-for-the-library-ruby-gems-2-3-0-directory-ma)
 
-4. `ruby-install ruby` then exit terimal after installation
+2. `ruby-install ruby` then exit terimal after installation
 
-5. open new terminal and `chruby 3.1.3`
-    - troublshoot by checking out ruby version: `ruby -v`
+3. Open new terminal and `chruby 3.1.3`
+    - troubleshoot by checking out ruby version: `ruby -v`
+##### Fedora
+Install ruby and development tools (preferably in a [toolbx]*(https://containertoolbx.org) or [distrobox](https://github.com/89luca89/distrobox) container):
+```bash
+sudo dnf install ruby rubygems ruby-devel gcc gcc-c++ rpm-build
+```
+
+#### Fork and clone the repo:
+1. fork opdev github pages [repo](https://github.com/opdev/opdev.github.io)
+2. `git clone` from your forked repo
+
 #### In opdev.github.io folder, run the steps below to live serve pages:
-6. `gem install jekyll bundler`
+3. `gem install jekyll bundler` (you might need `sudo` on Fedora)
+4. If desired, add your `GEM_HOME` to your `PATH` (example instructions for `bash`):
+```bash
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
 
 #### Regenerate all gemspecs if needed:
-7. `gem pristine --all`
+5. `gem pristine --all`
+
+#### Run Bundler update
+6. `bundler update`
 
 #### Run live server:
-8. `jekyll serve -l`
+7. `jekyll serve -l` or `jekyll serve --drafts` to test draft posts.
 
 <br></br>
 
 ---
-# Submit an Article
+# Submit a Post
 
-1. Create Markdown style article
-
-2. Add markdown file to **_articles** folder
-
-3. run `jekyll serve -l` to build site & check that it all works and looks as desired
-
-4. Add, commit, push, & create pull request
+1. Create a Markdown file in the `_drafts` directory.
+2. Add the Jekyll-specific front matter at the beginning of your post with a title, date, description, at least one category, and any relevant tags. See existing posts for examples.
+3. Run `jekyll serve --drafts` to run your local development server. Check that your post works and looks as desired.
+4. Commit your changes and submit a pull request for your new post.
+5. After your request is merged, someone else on the team will review your post and create a new pull request with any suggested edits and changes.
+6. After edits, your post will be moved from the `_drafts` directory to `_posts`.
 
 <br></br>
 
