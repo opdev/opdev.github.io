@@ -18,20 +18,6 @@ title: Standard Post
     <div class="blog-detail-description">
         <p>{{ content }}</p>
 
-        <div class="mt-5">
-            <h6>Tags:</h6>
-                {% for tag in page.tags %}
-                {% assign tag_slug = tag | slugify: "raw" %}
-                <div class="tagcloud">
-                    <a class="tag-link"
-                    href={{ site.baseurl | append: "/" | append: tag_slug | append: "/" }}
-                    rel="category tag">
-                    {{ tag }}
-                    </a>
-                </div>
-                {% endfor %}
-        </div>
-
         <div class="media post-author-box">
             <img class="d-flex mr-3 rounded-circle" src="../assets/images/user/user-5.png" alt="Generic placeholder image">
             <div class="media-body">

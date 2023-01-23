@@ -111,7 +111,7 @@
                                     <!-- Categories widget-->
                                     <aside class="widget widget_categories">
                                         <div class="widget-title all-tags">Categories</div>
-                                        <ul>
+                                        <!-- <ul>
                                             {% assign categories = site.posts | all_categories %}
                                             {% for category in categories %}
                                             {% assign category_slug = category['name'] | slugify: "raw" %}
@@ -123,7 +123,7 @@
                                                 </a>
                                             </li>
                                             {% endfor %}
-                                        </ul>
+                                        </ul> -->
                                     </aside>
 
                                     <!-- Recent entries widget-->
@@ -176,15 +176,7 @@
                                     <aside class="widget widget_tag_cloud">
                                         <div class="widget-title">Tags</div>
                                         <div class="tagcloud">
-                                            {% assign tags = site.posts | all_tags %}
-                                            {% for tag in tags %}
-                                            {% assign tag_slug = tag['name'] | slugify: "raw" %}
-                                                <a class="tag-link"
-                                                href={{ site.baseurl | append: "/" | append: tag_slug | append: "/" }}
-                                                rel="category tag">
-                                                {{ tag['name'] }} ({{ tag['count'] }})
-                                                </a>
-                                            {% endfor %}
+
                                         </div>
                                     </aside>
                                 </div>
