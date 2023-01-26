@@ -2,9 +2,6 @@ collections:
   pages:
     output: true
     permalink: /:name
-  tags:
-    output: true
-    permalink: /:name
   categories:
     output: true
     permalink: /:name
@@ -23,11 +20,6 @@ defaults:
       type: "categories"
     values:
       layout: "categorypage"
-  - scope:
-      path: ""
-      type: "tags"
-    values:
-      layout: "tagpage"
   - scope:
       path: ""
     values:
