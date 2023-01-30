@@ -2,6 +2,7 @@
 title: "OLM from 10,000-ft"
 linkTitle: "OLM from 10,000-ft"
 date: 2022-02-01
+categories: documentation
 weight: 4
 description: >
   A 10,000-ft view of the Operator Lifecycle Manager (OLM).
@@ -9,7 +10,7 @@ description: >
 
 OLM provides a way to install, manage and upgrade operators on a cluster.
 
-This command shows all the operators available on the cluster for installation. 
+This command shows all the operators available on the cluster for installation.
 
 ```bash
 oc get packagemanifests
@@ -44,13 +45,13 @@ You might note that the name of the catalog is formatted in the container image 
 
 So now we know where the l5-operator is stored and the name of its catalog. Now we are ready to install it using OLM.
 
-OLM itself functions via 2 operators. 
+OLM itself functions via 2 operators.
 
 * $\color{orange}\textsf{OLM \ Operator}$
 
 * $\color{green}\textsf{Catalog \ Operator}$
 
-They work together to install operators. For clarity, I will tag $\color{orange}\textsf{OLM}$ for things the OLM Operator manages</span>, and tag $\color{green}\textsf{Catalog}$ for things the Catalog Operator manages</span>. 
+They work together to install operators. For clarity, I will tag $\color{orange}\textsf{OLM}$ for things the OLM Operator manages</span>, and tag $\color{green}\textsf{Catalog}$ for things the Catalog Operator manages</span>.
 
 1. Create a namespace within which we will install the operator.
 
@@ -71,6 +72,3 @@ They work together to install operators. For clarity, I will tag $\color{orange}
 9.  $\color{orange}\textsf{OLM}$ Once all the depenencies are resolved and installed, the OLM Operator starts installing deployment resources defined in CSV
 
 10. $\color{orange}\textsf{OLM}$  After the operator is installed, it will be registered in a OperatorGroup.
-
- 
- 

@@ -11,22 +11,20 @@ title: page.tag
 {% for post in category_posts %}
     <article class="post">
 
-        <div class="post-header">
-            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <ul class="post-meta">
-                <li><i class="mdi mdi-calendar"></i>{{ post.date | date_to_string }}</li>
-            </ul>
-        </div>
-
-        <div class="post-preview">
-            <a href="{{ post.url }}"><img src="../assets/images/blog/blog-1.jpg" alt="" class="img-fluid rounded"></a>
-        </div>
-
-        <div class="post-content">
-            <p>{{ post.excerpt }}</p>
-        </div>
-
-        <div><a href="{{ post.url }}" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
+            <div class="post-header">
+                <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <ul class="post-meta">
+                    <li><i class="mdi mdi-calendar"></i>{{ post.date | date_to_string }}</li>
+                </ul>
+            </div>
+            {% if category_slug == "documentation" %}
+                <a href="{{ post.url }}" style="color: black">
+                    <div class="post-content">
+                        <p>{{ post.excerpt }}</p>
+                    </div>
+                </a>
+            {% endif %}
 
     </article>
+
 {% endfor %}

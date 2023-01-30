@@ -53,8 +53,6 @@
                                     <div class="row">
                                         <div class="col-md-9 col-xs-12">
                                             <h2><span>{{ page.title }}</span></h2>
-
-                                            <p class="subtitle text-muted">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor Aenean sollicitudin, adipisicing elit sed lorem quis bibendum auctor.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -85,78 +83,16 @@
                                        {% include search.html %}
                                     </aside>
 
-                                    <aside class="widget about-widget">
-                                        <div class="widget-title">About Me</div>
-
-                                        <div class="text-center">
-                                            <img src="../assets/images/photo.jpg" alt="About Me" class="rounded-circle">
-
-                                            <p>Quis vero phasellus hac nullam, in quam vitae duis adipiscing mauris leo, laoreet eget at quis, ante vestibulum vivamus vel. Sapien lobortis, eget orci purus amet pede, consectetur neque risus.</p>
-                                        </div>
-
-                                    </aside>
-
-                                    <aside class="widget about-widget">
-                                        <div class="widget-title">Subscribe & Follow</div>
-
-                                        <ul class="socials">
-                                            <li><a href="http://facebook.com"><i class="mdi mdi-facebook"></i></a></li>
-                                            <li><a href="http://twitter.com"><i class="mdi mdi-twitter"></i></a></li>
-                                            <li><a href="http://instagram.com"><i class="mdi mdi-instagram"></i></a></li>
-                                            <li><a href="http://pinterest.com"><i class="mdi mdi-pinterest"></i></a></li>
-                                        </ul>
-
-                                    </aside>
-
                                     <!-- Categories widget-->
                                     <aside class="widget widget_categories">
                                         <div class="widget-title all-tags">Categories</div>
-                                        <!-- <ul>
-                                            {% assign categories = site.posts | all_categories %}
-                                            {% for category in categories %}
-                                            {% assign category_slug = category['name'] | slugify: "raw" %}
-                                            <li class="tagcloud">
-                                                <a class="tag-link"
-                                                href={{ site.baseurl | append: "/" | append: category_slug | append: "/" }}
-                                                rel="category tag">
-                                                {{ category['name'] }} ({{ category['count'] }})
-                                                </a>
-                                            </li>
-                                            {% endfor %}
-                                        </ul> -->
-                                    </aside>
-
-                                    <!-- Recent entries widget-->
-                                    <aside class="widget widget_recent_entries_custom">
-                                        <div class="widget-title">Popular Posts</div>
-                                        <ul>
-                                            <li class="clearfix">
-                                                <div class="wi">
-                                                    <a href="#"><img src="../assets/images/works/img1.jpg" alt="" class="img-fluid"></a>
-                                                </div>
-                                                <div class="wb"><a href="#">Beautiful Day With Friends..</a> <span class="post-date">Jun 15, 2017</span></div>
-                                            </li>
-                                            <li class="clearfix">
-                                                <div class="wi">
-                                                    <a href="#"><img src="../assets/images/works/img2.jpg" alt="" class="img-fluid"></a>
-                                                </div>
-                                                <div class="wb"><a href="#">Nature valley with cooling..</a> <span class="post-date">Jun 10, 2017</span></div>
-                                            </li>
-                                            <li class="clearfix">
-                                                <div class="wi">
-                                                    <a href="#"><img src="../assets/images/works/img3.jpg" alt="" class="img-fluid"></a>
-                                                </div>
-                                                <div class="wb"><a href="#">15 Best Healthy and Easy Salad..</a> <span class="post-date">Jun 8, 2017</span></div>
-                                            </li>
-                                        </ul>
-                                    </aside>
-
-                                    <!-- Text widget-->
-                                    <aside class="widget">
-                                        <div class="widget-title">Text Widget</div>
-
-                                        <p class="text-muted text-widget-des">Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag. </p>
-
+                                            <ul>
+                                                {% assign a = site.posts | group_by:"categories" | sort:"size" %}
+                                                {% for category in a %}
+                                                    {% assign category_slug = category['name'] | slugify: "raw" | remove: '["' | remove: '"]' | capitalize %}
+                                                    <li class="tagcloud"><a href={{ "../" | append: category_slug | append: "/" }}>{{ category_slug }} ({{ category['size'] }})</a></li>
+                                                {% endfor %}
+                                            </ul>
                                     </aside>
 
                                     <!-- Archives widget-->
@@ -175,9 +111,7 @@
                                     <!-- Tags widget-->
                                     <aside class="widget widget_tag_cloud">
                                         <div class="widget-title">Tags</div>
-                                        <div class="tagcloud">
-
-                                        </div>
+                                        <div class="tagcloud"></div>
                                     </aside>
                                 </div>
                             </div>
