@@ -89,8 +89,8 @@
                                             <ul>
                                                 {% assign a = site.posts | group_by:"categories" | sort:"size" %}
                                                 {% for category in a %}
-                                                    {% assign category_slug = category['name'] | slugify: "raw" | remove: '["' | remove: '"]' | capitalize %}
-                                                    <li class="tagcloud"><a href={{ "../" | append: category_slug | append: "/" }}>{{ category_slug }} ({{ category['size'] }})</a></li>
+                                                    {% assign category_slug = category['name'] | slugify: "raw" | remove: '["' | remove: '"]' %}
+                                                    <li class="tagcloud"><a href={{ "../" | append: category_slug | append: "/" }}>{{ category_slug | capitalize }} ({{ category['size'] }})</a></li>
                                                 {% endfor %}
                                             </ul>
                                     </aside>
