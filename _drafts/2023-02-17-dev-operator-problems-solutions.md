@@ -1,6 +1,6 @@
 ---
-title: "Debugging Operators : Problems and Solutions"
-linkTitle: "Debugging Operators : Problems and Solutions"
+title: "Troubleshooting Operators with Issues and Resolutions"
+linkTitle: "Troubleshooting Operators"
 date: 2022-02-17
 categories: documentation
 weight: 4
